@@ -56,6 +56,9 @@
 		D4449FB02496C3FC0060704D /* Simple Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				D4449FC72496C41D0060704D /* Controller */,
+				D4449FC62496C4170060704D /* View */,
+				D4449FC52496C4050060704D /* Model */,
 				D4449FB12496C3FC0060704D /* AppDelegate.swift */,
 				D4449FB32496C3FC0060704D /* SceneDelegate.swift */,
 				D4449FB52496C3FC0060704D /* ViewController.swift */,
@@ -65,6 +68,27 @@
 				D4449FBF2496C4000060704D /* Info.plist */,
 			);
 			path = "Simple Pomodoro";
+			sourceTree = "<group>";
+		};
+		D4449FC52496C4050060704D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4449FC62496C4170060704D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4449FC72496C41D0060704D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
