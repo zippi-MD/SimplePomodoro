@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D40516702496D32B00E803DD /* BottomPanelMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D405166F2496D32B00E803DD /* BottomPanelMenuView.swift */; };
+		D40516742496DCD600E803DD /* BottomPanelMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40516722496DCD600E803DD /* BottomPanelMenuViewController.swift */; };
+		D40516752496DCD600E803DD /* BottomPanelMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40516732496DCD600E803DD /* BottomPanelMenuViewController.xib */; };
 		D4449FB22496C3FC0060704D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FB12496C3FC0060704D /* AppDelegate.swift */; };
 		D4449FB42496C3FC0060704D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FB32496C3FC0060704D /* SceneDelegate.swift */; };
 		D4449FB62496C3FC0060704D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FB52496C3FC0060704D /* ViewController.swift */; };
 		D4449FB92496C3FC0060704D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4449FB72496C3FC0060704D /* Main.storyboard */; };
 		D4449FBB2496C4000060704D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4449FBA2496C4000060704D /* Assets.xcassets */; };
 		D4449FBE2496C4000060704D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4449FBC2496C4000060704D /* LaunchScreen.storyboard */; };
-		D4449FCD2496C56F0060704D /* BottomPanelMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4449FCB2496C56F0060704D /* BottomPanelMenuView.xib */; };
 		D4449FCF2496C8500060704D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FCE2496C8500060704D /* Constants.swift */; };
 		D4449FD12496C9260060704D /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FD02496C9260060704D /* AddTaskView.swift */; };
 		D4449FD42496C94F0060704D /* AddTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4449FD32496C94E0060704D /* AddTaskView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D405166F2496D32B00E803DD /* BottomPanelMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPanelMenuView.swift; sourceTree = "<group>"; };
+		D40516722496DCD600E803DD /* BottomPanelMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPanelMenuViewController.swift; sourceTree = "<group>"; };
+		D40516732496DCD600E803DD /* BottomPanelMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomPanelMenuViewController.xib; sourceTree = "<group>"; };
 		D4449FAE2496C3FC0060704D /* Simple Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Pomodoro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4449FB12496C3FC0060704D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4449FB32496C3FC0060704D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		D4449FBA2496C4000060704D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4449FBD2496C4000060704D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4449FBF2496C4000060704D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4449FCB2496C56F0060704D /* BottomPanelMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomPanelMenuView.xib; sourceTree = "<group>"; };
 		D4449FCE2496C8500060704D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D4449FD02496C9260060704D /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		D4449FD32496C94E0060704D /* AddTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskView.xib; sourceTree = "<group>"; };
@@ -107,6 +107,7 @@
 		D4449FC72496C41D0060704D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D40516722496DCD600E803DD /* BottomPanelMenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,9 +115,8 @@
 		D4449FC82496C5440060704D /* Bottom Panel Menu */ = {
 			isa = PBXGroup;
 			children = (
+				D40516732496DCD600E803DD /* BottomPanelMenuViewController.xib */,
 				D4449FD22496C93D0060704D /* AddTask */,
-				D4449FCB2496C56F0060704D /* BottomPanelMenuView.xib */,
-				D405166F2496D32B00E803DD /* BottomPanelMenuView.swift */,
 			);
 			path = "Bottom Panel Menu";
 			sourceTree = "<group>";
@@ -189,8 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4449FBE2496C4000060704D /* LaunchScreen.storyboard in Resources */,
-				D4449FCD2496C56F0060704D /* BottomPanelMenuView.xib in Resources */,
 				D4449FD42496C94F0060704D /* AddTaskView.xib in Resources */,
+				D40516752496DCD600E803DD /* BottomPanelMenuViewController.xib in Resources */,
 				D4449FBB2496C4000060704D /* Assets.xcassets in Resources */,
 				D4449FB92496C3FC0060704D /* Main.storyboard in Resources */,
 			);
@@ -204,9 +204,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4449FCF2496C8500060704D /* Constants.swift in Sources */,
-				D40516702496D32B00E803DD /* BottomPanelMenuView.swift in Sources */,
 				D4449FB62496C3FC0060704D /* ViewController.swift in Sources */,
 				D4449FB22496C3FC0060704D /* AppDelegate.swift in Sources */,
+				D40516742496DCD600E803DD /* BottomPanelMenuViewController.swift in Sources */,
 				D4449FD12496C9260060704D /* AddTaskView.swift in Sources */,
 				D4449FB42496C3FC0060704D /* SceneDelegate.swift in Sources */,
 			);

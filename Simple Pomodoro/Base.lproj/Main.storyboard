@@ -15,19 +15,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mzx-ZB-IoN" customClass="BottomPanelMenuView" customModule="Simple_Pomodoro" customModuleProvider="target">
-                                <rect key="frame" x="20" y="418" width="374" height="368"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sw7-NB-ZNb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="yt1-FR-gnH" kind="embed" identifier="bottomPanelMenuSegue" id="q9w-mv-wCY"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sw7-NB-ZNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AA3-Cu-uJJ"/>
+                            <constraint firstItem="sw7-NB-ZNb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="EE5-0f-c68"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sw7-NB-ZNb" secondAttribute="trailing" id="XNo-Ji-pez"/>
+                            <constraint firstItem="sw7-NB-ZNb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iDh-s1-vHu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomPanelMenuContainerView" destination="sw7-NB-ZNb" id="Swp-yd-5Vi"/>
+                        <outlet property="bottomPanelMenuTopConstraint" destination="AA3-Cu-uJJ" id="36E-ff-yvQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="67.633928571428569"/>
+            <point key="canvasLocation" x="89.855072463768124" y="-80.357142857142847"/>
+        </scene>
+        <!--Bottom Panel Menu View Controller-->
+        <scene sceneID="PyU-Ge-VnU">
+            <objects>
+                <viewController id="yt1-FR-gnH" customClass="BottomPanelMenuViewController" customModule="Simple_Pomodoro" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tz2-eh-EXD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674" y="631"/>
         </scene>
     </scenes>
 </document>
