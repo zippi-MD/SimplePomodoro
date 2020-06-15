@@ -36,12 +36,12 @@ class ViewController: UIViewController {
 
 extension ViewController {
     func setupBottomPanelMenu(){
-        guard let bottomPanelMenuVC = bottomPanelMenuVC else { return }
+        guard let _ = bottomPanelMenuVC else { return }
         
         bottomPanelMenuContainerView.layer.cornerRadius = 8.0
         bottomPanelMenuContainerView.layer.masksToBounds = true
         
-        bottomPanelMenuTopConstraint.constant = view.frame.height - bottomPanelMenuVC.firstPositionHeight - view.safeAreaInsets.bottom - view.safeAreaInsets.top
+        moveBottomPanelMenuToPosition(.first)
         
         let dragGesture = UIPanGestureRecognizer(target: self, action: #selector(userDraggedBottomPanelMenu(_:)))
         bottomPanelMenuContainerView.addGestureRecognizer(dragGesture)
@@ -52,6 +52,10 @@ extension ViewController {
         
         if(sender.state == .ended || sender.state == .cancelled){
             bottomPanelMenuPositionAtBegginingOfDraggGesture = nil
+            if let updatedPosition = getFinalPositionForBottomPanelView(withPosition: bottomPanelMenuContainerView.frame) {
+                moveBottomPanelMenuToPosition(updatedPosition)
+            }
+            
             return
         }
         else if(sender.state == .began){
@@ -72,5 +76,50 @@ extension ViewController {
                                                     y: initialPosition.minY + yTranslation,
                                                     width: initialPosition.width,
                                                     height: initialPosition.height)
+    }
+    
+    func getFinalPositionForBottomPanelView(withPosition position: CGRect) -> BottomPanelMenuPositions?{
+        guard let bottomPanelMenuVC = bottomPanelMenuVC else { return nil }
+        var heightsForPositions = [BottomPanelMenuPositions : CGFloat]()
+        
+        for position in BottomPanelMenuPositions.allCases {
+            let height = bottomPanelMenuVC.getPositionHeightForPosition(position)
+            heightsForPositions[position] = height
+        }
+        
+        let bottomPanelMenuPosition = view.frame.height - position.minY
+        
+        switch bottomPanelMenuPosition {
+        case 0.0..<heightsForPositions[.first, default: 10.0] * 2:
+            return .first
+        case heightsForPositions[.first, default: 150.0]..<heightsForPositions[.second, default: 0.0] * 3:
+            return .second
+        default:
+            return .third
+        }
+        
+    }
+    
+    func moveBottomPanelMenuToPosition(_ position: BottomPanelMenuPositions){
+        guard let bottomPanelMenuVC = bottomPanelMenuVC else { return }
+        let positionHeight = bottomPanelMenuVC.getPositionHeightForPosition(position)
+        
+        let constraintHeightForPosition: CGFloat
+        switch position {
+        case .first, .second:
+            constraintHeightForPosition = view.frame.height - positionHeight - view.safeAreaInsets.bottom - view.safeAreaInsets.top
+        case .third:
+            let safeSectionView = view.frame.height - view.safeAreaInsets.bottom - view.safeAreaInsets.top
+            constraintHeightForPosition = safeSectionView * 0.30
+        }
+        
+        
+        UIView.animate(withDuration: 1, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+            self.bottomPanelMenuTopConstraint.constant = constraintHeightForPosition
+            self.bottomPanelMenuTopConstraint.isActive = true
+            self.view.layoutSubviews()
+        }) { (_) in
+            
+        }
     }
 }

@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum BottomPanelMenuPositions: CaseIterable {
+    case first, second, third
+}
+
 class BottomPanelMenuViewController: UIViewController {
     @IBOutlet var containerView: UIView!
     @IBOutlet weak var upperTipSectionView: UIView!
@@ -26,13 +30,17 @@ class BottomPanelMenuViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
-    override func viewDidLayoutSubviews() {
-        
+    func getPositionHeightForPosition(_ position: BottomPanelMenuPositions) -> CGFloat{
+        let tipSectionHeight = upperTipSectionView.frame.height
+        let addTaskSectionHeight = addTaskView.frame.height + 1
+        let nextTaskSectionHeight = addTaskView.frame.height
+        switch position {
+        case .first:
+            return tipSectionHeight + addTaskSectionHeight + 10
+        case .second, .third:
+            return tipSectionHeight + addTaskSectionHeight + nextTaskSectionHeight + 30
+        }
     }
 
 
