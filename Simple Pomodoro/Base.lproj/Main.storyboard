@@ -28,6 +28,11 @@
                                     <segue destination="GpJ-0Y-P4h" kind="presentation" id="7mC-t4-sO4"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IiQ-FA-WDe" customClass="CircularProgressBarView" customModule="Simple_Pomodoro" customModuleProvider="target">
+                                <rect key="frame" x="87" y="243" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -47,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89.855072463768124" y="-80.357142857142847"/>
+            <point key="canvasLocation" x="123" y="-155"/>
         </scene>
         <!--Configuration Menu Table View Controller-->
         <scene sceneID="nju-Ha-WRD">
