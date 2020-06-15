@@ -19,6 +19,7 @@
 		D4449FD12496C9260060704D /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FD02496C9260060704D /* AddTaskView.swift */; };
 		D4449FD42496C94F0060704D /* AddTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4449FD32496C94E0060704D /* AddTaskView.xib */; };
 		D47020772497DE0500638139 /* ConfigurationMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47020762497DE0500638139 /* ConfigurationMenuTableViewController.swift */; };
+		D477C3332497FF490067C562 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477C3322497FF490067C562 /* Time.swift */; };
 		D4F784A02497F3B10095A4ED /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F7849F2497F3B10095A4ED /* CircularProgressBarView.swift */; };
 		D4F784A22497F3CB0095A4ED /* CircularProgressBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F784A12497F3CB0095A4ED /* CircularProgressBarView.xib */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		D4449FD02496C9260060704D /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		D4449FD32496C94E0060704D /* AddTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskView.xib; sourceTree = "<group>"; };
 		D47020762497DE0500638139 /* ConfigurationMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMenuTableViewController.swift; sourceTree = "<group>"; };
+		D477C3322497FF490067C562 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		D4F7849F2497F3B10095A4ED /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 		D4F784A12497F3CB0095A4ED /* CircularProgressBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircularProgressBarView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				D4449FCE2496C8500060704D /* Constants.swift */,
+				D477C3322497FF490067C562 /* Time.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				D4449FB22496C3FC0060704D /* AppDelegate.swift in Sources */,
 				D40516742496DCD600E803DD /* BottomPanelMenuViewController.swift in Sources */,
 				D4449FD12496C9260060704D /* AddTaskView.swift in Sources */,
+				D477C3332497FF490067C562 /* Time.swift in Sources */,
 				D47020772497DE0500638139 /* ConfigurationMenuTableViewController.swift in Sources */,
 				D4449FB42496C3FC0060704D /* SceneDelegate.swift in Sources */,
 			);

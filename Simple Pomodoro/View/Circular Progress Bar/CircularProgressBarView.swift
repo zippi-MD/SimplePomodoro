@@ -10,13 +10,24 @@ import UIKit
 
 @IBDesignable
 class CircularProgressBarView: UIView {
-    @IBOutlet var containerView: UIView!
-    @IBOutlet weak var centerLabel: UILabel!
+    @IBOutlet private var containerView: UIView!
+    @IBOutlet weak private var circularPathView: UIView!
+    @IBOutlet weak private var centerLabel: UILabel!
     
     let pathLayer = CAShapeLayer()
     
     var currentPercentage: Int = 0
     var pathColor: UIColor = UIColor.systemBlue
+    var centerLabelTextColor: UIColor = UIColor.black {
+        willSet {
+            centerLabel.textColor = newValue
+        }
+    }
+    var centerLabelText: String = "" {
+        willSet {
+            centerLabel.text = newValue
+        }
+    }
     
     override init(frame: CGRect) {
        super.init(frame: frame)
@@ -33,6 +44,7 @@ class CircularProgressBarView: UIView {
         bundle.loadNibNamed(String(describing: CircularProgressBarView.self), owner: self, options: nil)
         addSubview(containerView)
         containerView.frame = bounds
+        circularPathView.frame = bounds
         containerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
         setupUI()
@@ -42,8 +54,9 @@ class CircularProgressBarView: UIView {
     }
 
     private func setupUI(){
-        let center = containerView.center
-        let radius = containerView.frame.width / 2
+        
+        let center = circularPathView.center
+        let radius = circularPathView.frame.width / 2
         
         let circularPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat.pi / 2, endAngle: 2 * CGFloat.pi + CGFloat.pi / 2, clockwise: true)
         
@@ -55,12 +68,12 @@ class CircularProgressBarView: UIView {
         pathLayer.strokeStart = 0
         pathLayer.strokeEnd = 0
         
-        containerView.layer.addSublayer(pathLayer)
+        circularPathView.layer.addSublayer(pathLayer)
         
     }
     
     func setProgressTo(percentage: Int) {
-        guard let pathLayer = containerView.layer.sublayers?[0] as? CAShapeLayer else { return }
+        guard let pathLayer = circularPathView.layer.sublayers?[0] as? CAShapeLayer else { return }
         pathLayer.strokeEnd = CGFloat(Double(percentage) / 100)
         currentPercentage = percentage
     }
