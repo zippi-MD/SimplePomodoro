@@ -15,6 +15,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bag-8y-npv">
+                                <rect key="frame" x="8" y="52" width="398" height="317"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IiQ-FA-WDe" customClass="CircularProgressBarView" customModule="Simple_Pomodoro" customModuleProvider="target">
+                                        <rect key="frame" x="81.5" y="8" width="235" height="235"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="IiQ-FA-WDe" secondAttribute="height" multiplier="1:1" id="6Fh-OW-bdd"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ly-DB-EfE">
+                                        <rect key="frame" x="332" y="270" width="58" height="39"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="Pause">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdk-iv-yhr">
+                                        <rect key="frame" x="8" y="270" width="42" height="39"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="Skip">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9Ly-DB-EfE" secondAttribute="bottom" constant="8" id="2JY-aa-FGU"/>
+                                    <constraint firstItem="IiQ-FA-WDe" firstAttribute="height" secondItem="Bag-8y-npv" secondAttribute="height" multiplier="0.741325" id="8nf-M1-nJv"/>
+                                    <constraint firstItem="wdk-iv-yhr" firstAttribute="leading" secondItem="Bag-8y-npv" secondAttribute="leading" constant="8" id="AF8-aA-Wcs"/>
+                                    <constraint firstItem="IiQ-FA-WDe" firstAttribute="centerX" secondItem="Bag-8y-npv" secondAttribute="centerX" id="aXi-bJ-guy"/>
+                                    <constraint firstItem="IiQ-FA-WDe" firstAttribute="top" secondItem="Bag-8y-npv" secondAttribute="top" constant="8" id="azH-zZ-oCv"/>
+                                    <constraint firstAttribute="bottom" secondItem="wdk-iv-yhr" secondAttribute="bottom" constant="8" id="oUD-Ww-nmS"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Ly-DB-EfE" secondAttribute="trailing" constant="8" id="uMy-Wb-TFm"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xH-ad-HZO">
                                 <rect key="frame" x="362" y="52" width="36" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
@@ -27,13 +63,6 @@
                                     <segue destination="GpJ-0Y-P4h" kind="presentation" id="7mC-t4-sO4"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IiQ-FA-WDe" customClass="CircularProgressBarView" customModule="Simple_Pomodoro" customModuleProvider="target">
-                                <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="IiQ-FA-WDe" secondAttribute="height" multiplier="1:1" id="6Fh-OW-bdd"/>
-                                </constraints>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sw7-NB-ZNb">
                                 <rect key="frame" x="0.0" y="683" width="414" height="257"/>
                                 <connections>
@@ -43,14 +72,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IiQ-FA-WDe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Rn-WR-Jvt"/>
+                            <constraint firstItem="Bag-8y-npv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="0Ye-tQ-cWM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2xH-ad-HZO" secondAttribute="trailing" constant="16" id="DCY-6K-3OP"/>
                             <constraint firstItem="sw7-NB-ZNb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="EE5-0f-c68"/>
                             <constraint firstItem="2xH-ad-HZO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="GRG-EN-krE"/>
-                            <constraint firstItem="IiQ-FA-WDe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ORV-Yb-4AV"/>
-                            <constraint firstItem="IiQ-FA-WDe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="WfW-ZM-fg2"/>
+                            <constraint firstItem="Bag-8y-npv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.353795" id="Mm9-AX-fhu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sw7-NB-ZNb" secondAttribute="trailing" id="XNo-Ji-pez"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bag-8y-npv" secondAttribute="trailing" constant="8" id="cjx-68-TJt"/>
                             <constraint firstItem="sw7-NB-ZNb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iDh-s1-vHu"/>
+                            <constraint firstItem="Bag-8y-npv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="twO-Hc-OMe"/>
                             <constraint firstItem="sw7-NB-ZNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w3F-yS-vp4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,6 +89,7 @@
                         <outlet property="bottomPanelMenuContainerView" destination="sw7-NB-ZNb" id="Swp-yd-5Vi"/>
                         <outlet property="bottomPanelMenuTopConstraint" destination="w3F-yS-vp4" id="bYg-2b-6GQ"/>
                         <outlet property="circularProgressBarView" destination="IiQ-FA-WDe" id="MhT-U3-R03"/>
+                        <outlet property="timerContainerTopConstraint" destination="twO-Hc-OMe" id="pmZ-IU-6zq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
