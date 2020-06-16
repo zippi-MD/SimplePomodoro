@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D40516742496DCD600E803DD /* BottomPanelMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40516722496DCD600E803DD /* BottomPanelMenuViewController.swift */; };
+		D40516752496DCD600E803DD /* BottomPanelMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40516732496DCD600E803DD /* BottomPanelMenuViewController.xib */; };
 		D4449FB22496C3FC0060704D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FB12496C3FC0060704D /* AppDelegate.swift */; };
 		D4449FB42496C3FC0060704D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FB32496C3FC0060704D /* SceneDelegate.swift */; };
 		D4449FB62496C3FC0060704D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FB52496C3FC0060704D /* ViewController.swift */; };
 		D4449FB92496C3FC0060704D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4449FB72496C3FC0060704D /* Main.storyboard */; };
 		D4449FBB2496C4000060704D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4449FBA2496C4000060704D /* Assets.xcassets */; };
 		D4449FBE2496C4000060704D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4449FBC2496C4000060704D /* LaunchScreen.storyboard */; };
+		D4449FCF2496C8500060704D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FCE2496C8500060704D /* Constants.swift */; };
+		D4449FD12496C9260060704D /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4449FD02496C9260060704D /* AddTaskView.swift */; };
+		D4449FD42496C94F0060704D /* AddTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4449FD32496C94E0060704D /* AddTaskView.xib */; };
+		D47020772497DE0500638139 /* ConfigurationMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47020762497DE0500638139 /* ConfigurationMenuTableViewController.swift */; };
+		D477C3332497FF490067C562 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477C3322497FF490067C562 /* Time.swift */; };
+		D4F784A02497F3B10095A4ED /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F7849F2497F3B10095A4ED /* CircularProgressBarView.swift */; };
+		D4F784A22497F3CB0095A4ED /* CircularProgressBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F784A12497F3CB0095A4ED /* CircularProgressBarView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D40516722496DCD600E803DD /* BottomPanelMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPanelMenuViewController.swift; sourceTree = "<group>"; };
+		D40516732496DCD600E803DD /* BottomPanelMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomPanelMenuViewController.xib; sourceTree = "<group>"; };
 		D4449FAE2496C3FC0060704D /* Simple Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Pomodoro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4449FB12496C3FC0060704D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4449FB32496C3FC0060704D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,13 @@
 		D4449FBA2496C4000060704D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4449FBD2496C4000060704D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4449FBF2496C4000060704D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4449FCE2496C8500060704D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D4449FD02496C9260060704D /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		D4449FD32496C94E0060704D /* AddTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskView.xib; sourceTree = "<group>"; };
+		D47020762497DE0500638139 /* ConfigurationMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationMenuTableViewController.swift; sourceTree = "<group>"; };
+		D477C3322497FF490067C562 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		D4F7849F2497F3B10095A4ED /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		D4F784A12497F3CB0095A4ED /* CircularProgressBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircularProgressBarView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D40516712496D83200E803DD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D4449FCE2496C8500060704D /* Constants.swift */,
+				D477C3322497FF490067C562 /* Time.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D4449FA52496C3FC0060704D = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +100,7 @@
 		D4449FC52496C4050060704D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D40516712496D83200E803DD /* Utils */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -80,6 +108,8 @@
 		D4449FC62496C4170060704D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D4F7849E2497F35D0095A4ED /* Circular Progress Bar */,
+				D4449FC82496C5440060704D /* Bottom Panel Menu */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,8 +117,53 @@
 		D4449FC72496C41D0060704D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D47020792497DE9C00638139 /* Bottom Panel Menu */,
+				D47020782497DE8D00638139 /* Configuration Menu */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D4449FC82496C5440060704D /* Bottom Panel Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D40516732496DCD600E803DD /* BottomPanelMenuViewController.xib */,
+				D4449FD22496C93D0060704D /* AddTask */,
+			);
+			path = "Bottom Panel Menu";
+			sourceTree = "<group>";
+		};
+		D4449FD22496C93D0060704D /* AddTask */ = {
+			isa = PBXGroup;
+			children = (
+				D4449FD02496C9260060704D /* AddTaskView.swift */,
+				D4449FD32496C94E0060704D /* AddTaskView.xib */,
+			);
+			path = AddTask;
+			sourceTree = "<group>";
+		};
+		D47020782497DE8D00638139 /* Configuration Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D47020762497DE0500638139 /* ConfigurationMenuTableViewController.swift */,
+			);
+			path = "Configuration Menu";
+			sourceTree = "<group>";
+		};
+		D47020792497DE9C00638139 /* Bottom Panel Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D40516722496DCD600E803DD /* BottomPanelMenuViewController.swift */,
+			);
+			path = "Bottom Panel Menu";
+			sourceTree = "<group>";
+		};
+		D4F7849E2497F35D0095A4ED /* Circular Progress Bar */ = {
+			isa = PBXGroup;
+			children = (
+				D4F7849F2497F3B10095A4ED /* CircularProgressBarView.swift */,
+				D4F784A12497F3CB0095A4ED /* CircularProgressBarView.xib */,
+			);
+			path = "Circular Progress Bar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4449FBE2496C4000060704D /* LaunchScreen.storyboard in Resources */,
+				D4449FD42496C94F0060704D /* AddTaskView.xib in Resources */,
+				D40516752496DCD600E803DD /* BottomPanelMenuViewController.xib in Resources */,
 				D4449FBB2496C4000060704D /* Assets.xcassets in Resources */,
+				D4F784A22497F3CB0095A4ED /* CircularProgressBarView.xib in Resources */,
 				D4449FB92496C3FC0060704D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,8 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4449FCF2496C8500060704D /* Constants.swift in Sources */,
 				D4449FB62496C3FC0060704D /* ViewController.swift in Sources */,
+				D4F784A02497F3B10095A4ED /* CircularProgressBarView.swift in Sources */,
 				D4449FB22496C3FC0060704D /* AppDelegate.swift in Sources */,
+				D40516742496DCD600E803DD /* BottomPanelMenuViewController.swift in Sources */,
+				D4449FD12496C9260060704D /* AddTaskView.swift in Sources */,
+				D477C3332497FF490067C562 /* Time.swift in Sources */,
+				D47020772497DE0500638139 /* ConfigurationMenuTableViewController.swift in Sources */,
 				D4449FB42496C3FC0060704D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
