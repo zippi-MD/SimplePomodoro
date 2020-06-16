@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var bottomPanelMenuContainerView: UIView!
     @IBOutlet weak var bottomPanelMenuTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var timerContainerTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var circularProgressBarView: CircularProgressBarView!
     
     var bottomPanelMenuVC: BottomPanelMenuViewController?
@@ -116,10 +117,30 @@ extension ViewController {
             constraintHeightForPosition = 0
         }
         
-        self.bottomPanelMenuTopConstraint.constant = constraintHeightForPosition
+        bottomPanelMenuTopConstraint.constant = constraintHeightForPosition
         
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
+        moveTimerContainerTo(position: position)
+    }
+    
+    func moveTimerContainerTo(position: BottomPanelMenuPositions){
+        
+        let constraintHeightForPosition: CGFloat
+        
+        switch position {
+        case .first, .second:
+            constraintHeightForPosition = (view.frame.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom) * 0.25
+        case .third, .fourth:
+            constraintHeightForPosition = 8
+        }
+        
+        timerContainerTopConstraint.constant = constraintHeightForPosition
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+        
     }
 }
