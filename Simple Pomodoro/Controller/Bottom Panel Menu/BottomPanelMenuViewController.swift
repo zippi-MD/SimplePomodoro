@@ -9,7 +9,7 @@
 import UIKit
 
 enum BottomPanelMenuPositions: CaseIterable {
-    case first, second, third
+    case first, second, third, fourth
 }
 
 class BottomPanelMenuViewController: UIViewController {
@@ -38,7 +38,7 @@ class BottomPanelMenuViewController: UIViewController {
         switch position {
         case .first:
             return tipSectionHeight + addTaskSectionHeight + 10
-        case .second, .third:
+        case .second, .third, .fourth:
             return tipSectionHeight + addTaskSectionHeight + nextTaskSectionHeight + 30
         }
     }

@@ -7,44 +7,20 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "024C7B68-9970-441D-BD78-A0154BEF1CBB"
+            uuid = "14CDFD5C-764B-4850-8335-475700E78225"
             shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "Yes"
-            filePath = "Simple Pomodoro/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "userDraggedBottomPanelMenu(_:)"
-            landmarkType = "7">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
-                  <ActionContent
-                     consoleCommand = "po updatedPosition">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9DAB041C-52FF-4D4E-9467-A3F56992675D"
-            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simple Pomodoro/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "getFinalPositionForBottomPanelView(withPosition:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9DAB041C-52FF-4D4E-9467-A3F56992675D - b8d8095fc9288b72"
+                  uuid = "14CDFD5C-764B-4850-8335-475700E78225 - b8d8095fc9288b72"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -54,12 +30,12 @@
                   urlString = "file:///Users/alejandromendoza/Desktop/Simple%20Pomodoro/Simple%20Pomodoro/Simple%20Pomodoro/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "1084">
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "2112">
                </Location>
                <Location
-                  uuid = "9DAB041C-52FF-4D4E-9467-A3F56992675D - b8d8095fc9288b72"
+                  uuid = "14CDFD5C-764B-4850-8335-475700E78225 - b8d8095fc9288b72"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -69,27 +45,26 @@
                   urlString = "file:///Users/alejandromendoza/Desktop/Simple%20Pomodoro/Simple%20Pomodoro/Simple%20Pomodoro/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "1636">
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "2712">
+               </Location>
+               <Location
+                  uuid = "14CDFD5C-764B-4850-8335-475700E78225 - b8d8095fc9288b72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simple_Pomodoro.ViewController.getFinalPositionForBottomPanelView(withPosition: __C.CGRect) -&gt; Swift.Optional&lt;Simple_Pomodoro.BottomPanelMenuPositions&gt;"
+                  moduleName = "Simple Pomodoro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alejandromendoza/Desktop/Simple%20Pomodoro/Simple%20Pomodoro/Simple%20Pomodoro/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "3404">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4016793F-A0C4-4F48-9664-30EAC93C21A0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Simple Pomodoro/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "moveBottomPanelMenuToPosition(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

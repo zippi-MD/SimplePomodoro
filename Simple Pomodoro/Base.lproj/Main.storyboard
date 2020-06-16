@@ -15,44 +15,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sw7-NB-ZNb">
-                                <rect key="frame" x="0.0" y="504" width="414" height="436"/>
-                                <connections>
-                                    <segue destination="yt1-FR-gnH" kind="embed" identifier="bottomPanelMenuSegue" id="q9w-mv-wCY"/>
-                                </connections>
-                            </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xH-ad-HZO">
-                                <rect key="frame" x="326" y="95" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xH-ad-HZO">
+                                <rect key="frame" x="362" y="52" width="36" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <state key="normal" image="gear" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
                                 <connections>
                                     <segue destination="GpJ-0Y-P4h" kind="presentation" id="7mC-t4-sO4"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IiQ-FA-WDe" customClass="CircularProgressBarView" customModule="Simple_Pomodoro" customModuleProvider="target">
-                                <rect key="frame" x="63.5" y="304.5" width="287" height="287"/>
+                                <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IiQ-FA-WDe" secondAttribute="height" multiplier="1:1" id="6Fh-OW-bdd"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sw7-NB-ZNb">
+                                <rect key="frame" x="0.0" y="683" width="414" height="257"/>
+                                <connections>
+                                    <segue destination="yt1-FR-gnH" kind="embed" identifier="bottomPanelMenuSegue" id="q9w-mv-wCY"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sw7-NB-ZNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AA3-Cu-uJJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2xH-ad-HZO" secondAttribute="trailing" constant="42" id="DCY-6K-3OP"/>
+                            <constraint firstItem="IiQ-FA-WDe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Rn-WR-Jvt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2xH-ad-HZO" secondAttribute="trailing" constant="16" id="DCY-6K-3OP"/>
                             <constraint firstItem="sw7-NB-ZNb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="EE5-0f-c68"/>
-                            <constraint firstItem="2xH-ad-HZO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="GRG-EN-krE"/>
-                            <constraint firstItem="IiQ-FA-WDe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.693237" id="Gfs-p2-h7q"/>
-                            <constraint firstItem="IiQ-FA-WDe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O3H-Kp-inF"/>
+                            <constraint firstItem="2xH-ad-HZO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="GRG-EN-krE"/>
+                            <constraint firstItem="IiQ-FA-WDe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ORV-Yb-4AV"/>
+                            <constraint firstItem="IiQ-FA-WDe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="WfW-ZM-fg2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sw7-NB-ZNb" secondAttribute="trailing" id="XNo-Ji-pez"/>
                             <constraint firstItem="sw7-NB-ZNb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iDh-s1-vHu"/>
-                            <constraint firstItem="IiQ-FA-WDe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uKG-7c-zU7"/>
+                            <constraint firstItem="sw7-NB-ZNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w3F-yS-vp4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="bottomPanelMenuContainerView" destination="sw7-NB-ZNb" id="Swp-yd-5Vi"/>
-                        <outlet property="bottomPanelMenuTopConstraint" destination="AA3-Cu-uJJ" id="36E-ff-yvQ"/>
+                        <outlet property="bottomPanelMenuTopConstraint" destination="w3F-yS-vp4" id="bYg-2b-6GQ"/>
+                        <outlet property="circularProgressBarView" destination="IiQ-FA-WDe" id="MhT-U3-R03"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -564,4 +570,7 @@
             <point key="canvasLocation" x="-712" y="606"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
+    </resources>
 </document>

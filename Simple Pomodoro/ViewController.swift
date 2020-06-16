@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var bottomPanelMenuContainerView: UIView!
     @IBOutlet weak var bottomPanelMenuTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var circularProgressBarView: CircularProgressBarView!
     
     var bottomPanelMenuVC: BottomPanelMenuViewController?
     var bottomPanelMenuPositionAtBegginingOfDraggGesture: CGRect?
@@ -19,12 +20,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewDidLayoutSubviews() {
-        
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         setupBottomPanelMenu()
+        circularProgressBarView.setProgressTo(percentage: 80)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,7 +39,7 @@ extension ViewController {
         bottomPanelMenuContainerView.layer.cornerRadius = 8.0
         bottomPanelMenuContainerView.layer.masksToBounds = true
         
-        moveBottomPanelMenuToPosition(.first)
+        moveBottomPanelMenuToPosition(.second)
         
         let dragGesture = UIPanGestureRecognizer(target: self, action: #selector(userDraggedBottomPanelMenu(_:)))
         bottomPanelMenuContainerView.addGestureRecognizer(dragGesture)
@@ -72,14 +70,14 @@ extension ViewController {
         
         if(finalYPosition < topMaxPosition || finalYPosition > bottomMinPosition){ return }
         
-        bottomPanelMenuContainerView.frame = CGRect(x: initialPosition.minX,
-                                                    y: initialPosition.minY + yTranslation,
-                                                    width: initialPosition.width,
-                                                    height: initialPosition.height)
+        let finalHeight = initialPosition.minY + yTranslation - view.safeAreaInsets.top
+        
+        bottomPanelMenuTopConstraint.constant = finalHeight
     }
     
     func getFinalPositionForBottomPanelView(withPosition position: CGRect) -> BottomPanelMenuPositions?{
         guard let bottomPanelMenuVC = bottomPanelMenuVC else { return nil }
+        
         var heightsForPositions = [BottomPanelMenuPositions : CGFloat]()
         
         for position in BottomPanelMenuPositions.allCases {
@@ -88,12 +86,15 @@ extension ViewController {
         }
         
         let bottomPanelMenuPosition = view.frame.height - position.minY
+        let viewSafeUpperLimit = view.frame.height - view.safeAreaInsets.top - view.safeAreaInsets.bottom
         
         switch bottomPanelMenuPosition {
         case 0.0..<heightsForPositions[.first, default: 10.0] * 2:
             return .first
-        case heightsForPositions[.first, default: 150.0]..<heightsForPositions[.second, default: 0.0] * 3:
+        case heightsForPositions[.first, default: 150.0]..<heightsForPositions[.second, default: 0.0] * 2.3:
             return .second
+        case (viewSafeUpperLimit * 0.8)..<viewSafeUpperLimit * 1.5:
+            return .fourth
         default:
             return .third
         }
@@ -110,16 +111,15 @@ extension ViewController {
             constraintHeightForPosition = view.frame.height - positionHeight - view.safeAreaInsets.bottom - view.safeAreaInsets.top
         case .third:
             let safeSectionView = view.frame.height - view.safeAreaInsets.bottom - view.safeAreaInsets.top
-            constraintHeightForPosition = safeSectionView * 0.30
+            constraintHeightForPosition = safeSectionView * 0.40
+        case .fourth:
+            constraintHeightForPosition = 0
         }
         
+        self.bottomPanelMenuTopConstraint.constant = constraintHeightForPosition
         
-        UIView.animate(withDuration: 1, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
-            self.bottomPanelMenuTopConstraint.constant = constraintHeightForPosition
-            self.bottomPanelMenuTopConstraint.isActive = true
-            self.view.layoutSubviews()
-        }) { (_) in
-            
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
         }
     }
 }
