@@ -14,8 +14,6 @@ class CircularProgressBarView: UIView {
     @IBOutlet weak private var circularPathView: UIView!
     @IBOutlet weak private var centerLabel: UILabel!
     
-    let pathLayer = CAShapeLayer()
-    
     var currentPercentage: Int = 0
     var pathColor: UIColor = UIColor.systemBlue
     var centerLabelTextColor: UIColor = UIColor.black {
@@ -46,14 +44,10 @@ class CircularProgressBarView: UIView {
         containerView.frame = bounds
         circularPathView.frame = bounds
         containerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        
-        setupUI()
-        setProgressTo(percentage: 20)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(testing))
-        containerView.addGestureRecognizer(tap)
     }
 
-    private func setupUI(){
+    private func setupPathLayer(){
+        let pathLayer = CAShapeLayer()
         
         let center = circularPathView.center
         let radius = circularPathView.frame.width / 2
@@ -72,14 +66,19 @@ class CircularProgressBarView: UIView {
         
     }
     
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        guard let _ = circularPathView.layer.sublayers?[0] as? CAShapeLayer else {
+            setupPathLayer()
+            return
+        }
+        
+    }
+    
     func setProgressTo(percentage: Int) {
         guard let pathLayer = circularPathView.layer.sublayers?[0] as? CAShapeLayer else { return }
         pathLayer.strokeEnd = CGFloat(Double(percentage) / 100)
         currentPercentage = percentage
-    }
-    
-    @objc
-    func testing(){
-        setProgressTo(percentage: currentPercentage + 1)
     }
 }
